@@ -3,272 +3,192 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>𝐒𝐄𝐂𝐔𝐑𝐈𝐓𝐘</title>
 
 <style>
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, sans-serif;
     background: #050505;
-    color: #ffffff;
+    color: white;
 }
 
-/* NAVBAR */
-
-.navbar {
-    height: 72px;
-    padding: 0 7%;
+nav {
+    height: 70px;
+    padding: 0 6%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     border-bottom: 1px solid #222;
-    background: #050505;
-    position: sticky;
-    top: 0;
-    z-index: 10;
 }
 
 .brand {
     display: flex;
     align-items: center;
-    gap: 12px;
-    font-size: 18px;
-    font-weight: 900;
+    gap: 10px;
+    font-weight: bold;
 }
 
 .logo {
-    width: 42px;
-    height: 42px;
-    border-radius: 11px;
-    background: #ffffff;
-    color: #000000;
+    width: 40px;
+    height: 40px;
+    background: white;
+    color: black;
+    border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 23px;
-    font-weight: 900;
+    font-weight: bold;
+    font-size: 20px;
 }
 
-.nav-links {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-.nav-links a {
-    color: #ffffff;
+nav a {
+    color: white;
     text-decoration: none;
+    margin-left: 10px;
 }
 
-.nav-button {
-    background: #111111;
-    border: 1px solid #333333;
-    padding: 10px 16px;
+.add {
+    background: white;
+    color: black;
+    padding: 10px 15px;
     border-radius: 8px;
-    font-weight: 800;
+    font-weight: bold;
 }
-
-.add-button {
-    background: #ffffff !important;
-    color: #000000 !important;
-    border-color: #ffffff;
-}
-
-
-/* HERO */
 
 .hero {
-    max-width: 950px;
-    margin: auto;
     text-align: center;
-    padding: 120px 20px 100px;
+    padding: 110px 20px 90px;
 }
 
 .hero h1 {
-    font-size: clamp(50px, 10vw, 90px);
-    line-height: 1;
-    letter-spacing: -4px;
+    font-size: 70px;
     font-weight: 900;
 }
 
-.hero h1 span {
-    color: #777777;
+.hero span {
+    color: #777;
 }
 
 .hero p {
-    max-width: 620px;
+    color: #999;
+    max-width: 600px;
     margin: 25px auto;
-    color: #999999;
-    font-size: 17px;
-    line-height: 1.7;
-}
-
-.buttons {
-    display: flex;
-    justify-content: center;
-    gap: 12px;
-    flex-wrap: wrap;
-    margin-top: 30px;
+    line-height: 1.6;
 }
 
 .button {
     display: inline-block;
-    padding: 14px 24px;
-    border-radius: 9px;
+    padding: 13px 22px;
+    margin: 5px;
+    border-radius: 8px;
     text-decoration: none;
-    font-weight: 800;
+    font-weight: bold;
 }
 
-.white-button {
-    background: #ffffff;
-    color: #000000;
+.white {
+    background: white;
+    color: black;
 }
 
-.dark-button {
-    background: #101010;
-    border: 1px solid #333333;
-    color: #ffffff;
+.dark {
+    background: #111;
+    color: white;
+    border: 1px solid #333;
 }
 
-
-/* HELP */
-
-.help {
+section {
     max-width: 800px;
     margin: auto;
-    padding: 20px 20px 110px;
 }
 
-.section-title {
+.help {
+    padding: 50px 20px 100px;
+}
+
+.title {
     text-align: center;
-    margin-bottom: 35px;
+    margin-bottom: 30px;
 }
 
-.section-title h2 {
-    font-size: 38px;
-    font-weight: 900;
+.title h2 {
+    font-size: 40px;
 }
 
-.section-title p {
-    color: #777777;
-    margin-top: 10px;
+.title p {
+    color: #777;
+    margin-top: 8px;
 }
 
-.command-card {
+.card {
     background: #0d0d0d;
-    border: 1px solid #242424;
-    border-radius: 15px;
-    padding: 30px;
+    border: 1px solid #292929;
+    border-radius: 14px;
+    padding: 28px;
 }
 
 .command {
     display: inline-block;
-    padding: 9px 13px;
     background: #181818;
-    border: 1px solid #333333;
-    border-radius: 8px;
-    color: #ffffff;
+    border: 1px solid #333;
+    padding: 8px 12px;
+    border-radius: 7px;
     font-family: monospace;
-    font-size: 15px;
     margin-bottom: 15px;
 }
 
-.command-card h3 {
-    font-size: 20px;
-    margin-bottom: 8px;
+.card p {
+    color: #777;
+    margin-top: 8px;
+    line-height: 1.5;
 }
-
-.command-card p {
-    color: #777777;
-    line-height: 1.6;
-    font-size: 14px;
-}
-
-
-/* SERVER */
 
 .server {
-    max-width: 900px;
     margin: 0 auto 100px;
-    padding: 60px 25px;
+    padding: 55px 20px;
     text-align: center;
-    background: linear-gradient(135deg, #111111, #080808);
+    background: #0d0d0d;
     border: 1px solid #292929;
-    border-radius: 18px;
+    border-radius: 16px;
 }
 
 .server h2 {
-    font-size: 38px;
-    font-weight: 900;
+    font-size: 35px;
 }
 
 .server p {
-    max-width: 550px;
-    margin: 12px auto 28px;
-    color: #777777;
-    line-height: 1.6;
+    color: #777;
+    margin: 12px 0 25px;
 }
-
-
-/* FOOTER */
 
 footer {
-    border-top: 1px solid #222222;
-    padding: 30px 7%;
+    border-top: 1px solid #222;
     text-align: center;
-    color: #666666;
-    font-size: 13px;
+    padding: 30px;
+    color: #666;
 }
 
+@media (max-width: 600px) {
 
-/* MOBILE */
-
-@media (max-width: 700px) {
-
-    .navbar {
-        padding: 0 17px;
+    nav {
+        padding: 0 15px;
     }
 
-    .nav-links a:not(.add-button) {
+    nav a:first-child {
         display: none;
     }
 
-    .add-button {
-        padding: 9px 12px;
-        font-size: 12px;
+    .hero h1 {
+        font-size: 50px;
     }
 
     .hero {
-        padding: 80px 18px 70px;
-    }
-
-    .hero h1 {
-        font-size: 55px;
-        letter-spacing: -3px;
-    }
-
-    .hero p {
-        font-size: 15px;
-    }
-
-    .help {
-        padding-left: 18px;
-        padding-right: 18px;
-    }
-
-    .server {
-        margin-left: 18px;
-        margin-right: 18px;
+        padding-top: 80px;
     }
 }
 </style>
@@ -276,154 +196,98 @@ footer {
 
 <body>
 
-
-<!-- NAVBAR -->
-
-<nav class="navbar">
+<nav>
 
     <div class="brand">
-
         <div class="logo">D</div>
-
         <span>𝐒𝐄𝐂𝐔𝐑𝐈𝐓𝐘</span>
-
     </div>
 
-
-    <div class="nav-links">
-
-        <a
-            class="nav-button"
-            href="#help">
-            /help
-        </a>
+    <div>
+        <a href="#help">Help</a>
 
         <a
-            class="nav-button"
-            href="#server">
-            Server
-        </a>
-
-        <a
-            class="nav-button add-button"
+            class="add"
             href="https://discord.com/oauth2/authorize?client_id=1543225753360015501&scope=bot+applications.commands&permissions=8"
             target="_blank">
             Add to Discord
         </a>
-
     </div>
 
 </nav>
 
-
-<!-- HERO -->
-
-<section class="hero">
+<div class="hero">
 
     <h1>
         𝐒𝐄𝐂𝐔𝐑𝐈𝐓𝐘<br>
-        <span>simple. powerful.</span>
+        <span>Discord Bot</span>
     </h1>
 
     <p>
         Welcome to the official 𝐒𝐄𝐂𝐔𝐑𝐈𝐓𝐘 website.
-        Use the bot directly inside your Discord server.
+        A simple and powerful Discord bot for your server.
     </p>
-
-
-    <div class="buttons">
-
-        <a
-            class="button white-button"
-            href="https://discord.com/oauth2/authorize?client_id=1543225753360015501&scope=bot+applications.commands&permissions=8"
-            target="_blank">
-            Add 𝐒𝐄𝐂𝐔𝐑𝐈𝐓𝐘
-        </a>
-
-
-        <a
-            class="button dark-button"
-            href="#server">
-            Support Server
-        </a>
-
-    </div>
-
-</section>
-
-
-<!-- HELP -->
-
-<section
-    class="help"
-    id="help">
-
-    <div class="section-title">
-
-        <h2>𝙃𝙚𝙡𝙥</h2>
-
-        <p>
-            Available command
-        </p>
-
-    </div>
-
-
-    <div class="command-card">
-
-        <div class="command">
-            /help
-        </div>
-
-        <h3>
-            Help
-        </h3>
-
-        <p>
-            Shows the available commands and information
-            about 𝐒𝐄𝐂𝐔𝐑𝐈𝐓𝐘.
-        </p>
-
-    </div>
-
-</section>
-
-
-<!-- SERVER -->
-
-<section
-    class="server"
-    id="server">
-
-    <h2>
-        𝐒𝐄𝐂𝐔𝐑𝐈𝐓𝐘 Server
-    </h2>
-
-    <p>
-        Join the official 𝐒𝐄𝐂𝐔𝐑𝐈𝐓𝐘 support server.
-    </p>
-
 
     <a
-        class="button white-button"
+        class="button white"
+        href="https://discord.com/oauth2/authorize?client_id=1543225753360015501&scope=bot+applications.commands&permissions=8"
+        target="_blank">
+        Add 𝐒𝐄𝐂𝐔𝐑𝐈𝐓𝐘
+    </a>
+
+    <a
+        class="button dark"
         href="https://discord.gg/BhaKQDBUHh"
         target="_blank">
+        Support Server
+    </a>
 
+</div>
+
+<section class="help" id="help">
+
+    <div class="title">
+
+        <h2>/help</h2>
+
+        <p>Available command</p>
+
+    </div>
+
+    <div class="card">
+
+        <div class="command">/help</div>
+
+        <h3>Help</h3>
+
+        <p>
+            Shows the available commands for 𝐒𝐄𝐂𝐔𝐑𝐈𝐓𝐘.
+        </p>
+
+    </div>
+
+</section>
+
+<section class="server">
+
+    <h2>𝐒𝐄𝐂𝐔𝐑𝐈𝐓𝐘 Support</h2>
+
+    <p>
+        Join the official support server.
+    </p>
+
+    <a
+        class="button white"
+        href="https://discord.gg/BhaKQDBUHh"
+        target="_blank">
         Join Server
-
     </a>
 
 </section>
 
-
-<!-- FOOTER -->
-
 <footer>
-
     © 2026 𝐒𝐄𝐂𝐔𝐑𝐈𝐓𝐘
-
 </footer>
 
-
 </body>
-  </html>
+</html> 
